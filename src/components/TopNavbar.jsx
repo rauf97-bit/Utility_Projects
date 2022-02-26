@@ -8,7 +8,7 @@ export const TopNavbar = () => {
     { name: "Contact", path: "/" },
     { name: "Login", path: "/" },
   ];
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   
   return (
     <>
@@ -51,7 +51,7 @@ export const TopNavbar = () => {
           <ul
             className={`flex flex-col md:flex-row absolute left-0 top-16 z-auto pb-3 md:pb-0 bg-indigo-600 w-full md:w-auto text-white md:static ease-in-out duration-300 ${isOpen ? 'translate-y-0' : 'translate-y-[-500px]' } ` } >
             {links.map((link) => (
-              <li key={link.name} className="mx-3 p-2 hover:opacity-50">
+              <li key={link.name} className="mx-3 p-2 text-white hover:opacity-50">
                 <a href={link.path}>{link.name}</a>
               </li>
             ))}
