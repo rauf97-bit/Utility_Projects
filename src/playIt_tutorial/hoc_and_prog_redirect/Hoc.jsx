@@ -2,19 +2,17 @@ import React from "react";
 
 const Hoc = (WrappedComponents) => {
   const colors = [
-    "red-500",
     "green-500",
     "blue-500",
-    "yellow-500",
-    "purple-500",
-    "brown-500",
-    "pink-500",
+    "gray-400",
+    "red-500",
+    "white"
   ];
-  const randomColor = colors[Math.floor(Math.random() * 7)];
+  const randomColor = colors[Math.floor(Math.random() * 5)];
 
   return (props) => {
     return (
-      <div className={`text-${randomColor}`}>
+      <div className={`bg-${randomColor}`}>
         <WrappedComponents {...props}/>
       </div>
     );

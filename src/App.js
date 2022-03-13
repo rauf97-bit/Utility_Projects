@@ -2,11 +2,13 @@ import './App.css';
 // import Main from './ImageGallery/Main';
 import './index.css'
 import './App.css'
+// import Main from './portfolio/Main';
 import Main from './playIt_tutorial/Main';
 // import Main from './calculator/Main';
 // import { TopNavbar } from './components/TopNavbar';
 // import {SideNavbar} from './components/SideNavbar'
 // import {Footer} from './components/Footer'
+// import Main from './demoModal/Main'
 function App() {
   return (
     <div>
@@ -16,8 +18,6 @@ function App() {
         Main Content
       </div> */}
       {/* <Footer /> */}
-      {/* <Main /> */}
-      {/* <Main /> */}
       <Main />
     </div>
   );

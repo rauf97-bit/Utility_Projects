@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "../containers/Button";
 
-export const TopNavbar = () => {
+export const TopNavbar = (props) => {
   const links = [
     { name: "Home", path: "/" },
     { name: "About", path: "/" },
@@ -43,13 +43,13 @@ export const TopNavbar = () => {
           </svg>
         </button>
       )}
-      <nav className="top-0 shadow-md bg-indigo-600 p-4 text-white ">
+      <nav className={`top-0 shadow-md ${props.color} p-4 text-white `}>
         <div
           className={`container mx-auto flex flex-wrap items-center justify-between`}
         >
           <div className="text-3xl font-extrabold">Brand</div>
           <ul
-            className={`flex flex-col md:flex-row absolute left-0 top-16 z-auto pb-3 md:pb-0 bg-indigo-600 w-full md:w-auto text-white md:static ease-in-out duration-300 ${isOpen ? 'translate-y-0' : 'translate-y-[-500px]' } ` } >
+            className={`flex flex-col md:flex-row absolute left-0 top-16 z-auto pb-3 md:pb-0 ${props.color} w-full md:w-auto text-white md:static ease-in-out duration-300 ${isOpen ? 'translate-y-0' : 'translate-y-[-500px]' } ` } >
             {links.map((link) => (
               <li key={link.name} className="mx-3 p-2 text-white hover:opacity-50">
                 <a href={link.path}>{link.name}</a>
