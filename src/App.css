@@ -552,6 +552,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: 2.5rem;
 }
 
+.bottom-5 {
+  bottom: 1.25rem;
+}
+
+.left-20 {
+  left: 5rem;
+}
+
 .z-50 {
   z-index: 50;
 }
@@ -574,6 +582,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .col-span-1 {
   grid-column: span 1 / span 1;
+}
+
+.col-span-3 {
+  grid-column: span 3 / span 3;
+}
+
+.m-1 {
+  margin: 0.25rem;
 }
 
 .mx-auto {
@@ -738,6 +754,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 500px;
 }
 
+.h-\[100\%\] {
+  height: 100%;
+}
+
+.h-\[50\%\] {
+  height: 50%;
+}
+
+.h-28 {
+  height: 7rem;
+}
+
+.h-5 {
+  height: 1.25rem;
+}
+
 .max-h-fit {
   max-height: -webkit-fit-content;
   max-height: -moz-fit-content;
@@ -799,6 +831,30 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: auto;
 }
 
+.w-28 {
+  width: 7rem;
+}
+
+.w-\[70\%\] {
+  width: 70%;
+}
+
+.w-\[90\%\] {
+  width: 90%;
+}
+
+.w-\[80\%\] {
+  width: 80%;
+}
+
+.w-5 {
+  width: 1.25rem;
+}
+
+.w-96 {
+  width: 24rem;
+}
+
 .max-w-fit {
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
@@ -837,6 +893,25 @@ Ensure the default browser behavior of the `hidden` attribute.
           transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -852,6 +927,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .grid-cols-5 {
@@ -896,6 +975,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .gap-2 {
   gap: 0.5rem;
+}
+
+.gap-3 {
+  gap: 0.75rem;
 }
 
 .gap-x-5 {
@@ -957,8 +1040,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-radius: 1.5rem;
 }
 
+.rounded-full {
+  border-radius: 9999px;
+}
+
 .border-2 {
   border-width: 2px;
+}
+
+.border-4 {
+  border-width: 4px;
 }
 
 .border-b-2 {
@@ -1037,6 +1128,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(20 184 166 / var(--tw-bg-opacity));
 }
 
+.bg-gray-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
+}
+
 .bg-green-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(34 197 94 / var(--tw-bg-opacity));
@@ -1045,6 +1141,64 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-gray-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+}
+
+.bg-green-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 101 52 / var(--tw-bg-opacity));
+}
+
+.bg-red-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+}
+
+.bg-gradient-to-b {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+}
+
+.bg-hero-pattern {
+  background-image: url(./Images/c5.jpg);
+}
+
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.from-black {
+  --tw-gradient-from: #000;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(0 0 0 / 0));
+}
+
+.from-indigo-900 {
+  --tw-gradient-from: #312e81;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(49 46 129 / 0));
+}
+
+.from-gray-700 {
+  --tw-gradient-from: #374151;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(55 65 81 / 0));
+}
+
+.from-stone-600 {
+  --tw-gradient-from: #57534e;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(87 83 78 / 0));
+}
+
+.to-indigo-900 {
+  --tw-gradient-to: #312e81;
+}
+
+.to-gray-700 {
+  --tw-gradient-to: #374151;
+}
+
+.to-gray-500 {
+  --tw-gradient-to: #6b7280;
+}
+
+.to-black {
+  --tw-gradient-to: #000;
 }
 
 .p-3 {
@@ -1069,6 +1223,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .p-\[2px\] {
   padding: 2px;
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
+.p-\[6px\] {
+  padding: 6px;
 }
 
 .py-0 {
@@ -1117,6 +1279,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .pb-5 {
   padding-bottom: 1.25rem;
+}
+
+.pt-10 {
+  padding-top: 2.5rem;
 }
 
 .text-center {
@@ -1293,12 +1459,84 @@ html, body{
   scroll-behavior: smooth;
 }
 
-body{
+/* body{
   background : black;
-}
+} */
 
 .nav-dot:hover span{
   opacity: 1;
+}
+
+.answer .active{
+  background-color: mediumblue;
+}
+
+.answer .correct{
+  /* background-color: green !important; */
+  -webkit-animation: correct 4s ease forwards;
+          animation: correct 4s ease forwards;
+}
+
+@-webkit-keyframes correct {
+  0%,22%,42%{
+    background-color: rgb(72, 16, 112);
+  }
+
+  20%,40%,60%{
+    background-color: rgb(31, 1, 53);
+  }
+
+  62%,100%{
+    background-color: rgb(5, 128, 5);
+  }
+}
+
+@keyframes correct {
+  0%,22%,42%{
+    background-color: rgb(72, 16, 112);
+  }
+
+  20%,40%,60%{
+    background-color: rgb(31, 1, 53);
+  }
+
+  62%,100%{
+    background-color: rgb(5, 128, 5);
+  }
+}
+
+.answer .wrong{
+  /* background-color: crimson !important; */
+  -webkit-animation: wrong 4s ease forwards;
+          animation: wrong 4s ease forwards;
+}
+
+@-webkit-keyframes wrong {
+  0%,22%,42%{
+    background-color: rgb(72, 16, 112);
+  }
+
+  20%,40%,60%{
+    background-color: rgb(31, 1, 53);
+  }
+
+  62%,100%{
+    background-color: crimson;
+  }
+}
+
+@keyframes wrong {
+  0%,22%,42%{
+    background-color: rgb(72, 16, 112);
+  }
+
+  20%,40%,60%{
+    background-color: rgb(31, 1, 53);
+  }
+
+  62%,100%{
+    background-color: crimson;
+  }
 }
 
 .hover\:border-teal-700:hover {
@@ -1327,6 +1565,10 @@ body{
 
 .focus\:border-2:focus {
   border-width: 2px;
+}
+
+.focus\:border-none:focus {
+  border-style: none;
 }
 
 .focus\:bg-green-500:focus {

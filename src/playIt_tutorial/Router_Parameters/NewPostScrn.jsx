@@ -1,28 +1,50 @@
-import React from "react";
 import NewPost from "./NewPost";
-import { useSelector } from "react-redux";
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import React, { Component } from "react";
+import { connect } from "react-redux";
 
-const NewPostScrn = () => {
-  const params = useParams();  
-  const post_ = useSelector((state) => state.posts);
-  const filteredPost = post_.filter((post) => post.id == params.id);
-  const [newPost, setNewPost] = useState([]);
-  function getPost() {
-    console.log(filteredPost);
-    setNewPost(filteredPost[0]);
+class NewPostScrn extends Component {
+  render() {
+    // console.log(this.props)
+    const { newPosts } = this.props;
+    // console.log(newPosts);
+    // const filteredPost = newPosts.filter((post) => post.id === parseInt(params.id));
+    // function getPost() {
+    //   setNewPost(filteredPost[0]);
+    // }
+    return (
+      <>
+        <NewPost newPost={newPosts} />
+      </>
+      // <div>Hello</div>
+    );
   }
-  useEffect(() => {
-    getPost()
-  }, [params]);
+}
 
-  console.log();
-  return (
-    <>
-      <NewPost newPost={newPost} />
-    </>
-  );
+const mapStateToProps = (state) => {
+  return { newPosts: state.posts };
 };
+// const mapDispatchToProps = {}
 
-export default NewPostScrn;
+export default connect(mapStateToProps)(NewPostScrn);
+
+// import { useParams } from "react-router-dom";
+// import { useSelector } from "react-redux";
+// import { useState, useEffect } from "react";
+//  const Newpost = () => {
+//   const params = useParams();
+// const post_ = useSelector((state) => state.posts);
+// const filteredPost = post_.filter((post) => post.id === parseInt(params.id));
+// const [newPost, setNewPost] = useState([]);
+// function getPost() {
+//   setNewPost(filteredPost[0]);
+// }
+//   // useEffect(() => {
+//   //   getPost()
+//   // }, [params]);
+
+//   return (
+//     <>
+//       <NewPost newPost={newPost} />
+//     </>
+//   );
+// };

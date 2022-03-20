@@ -5,9 +5,30 @@
 html, body{
   scroll-behavior: smooth;
 }
-body{
+/* body{
   background : black;
-}
+} */
 .nav-dot:hover span{
   opacity: 1;
+}
+.answer .active{
+  background-color: mediumblue;
+}
+.answer .correct{
+  /* background-color: green !important; */
+  animation: correct 4s ease forwards;
+}
+@keyframes correct {
+  0%,22%,42%{background-color: rgb(72, 16, 112);}
+  20%,40%,60%{background-color: rgb(31, 1, 53);}
+  62%,100%{background-color: rgb(5, 128, 5);}
+}
+.answer .wrong{
+  /* background-color: crimson !important; */
+  animation: wrong 4s ease forwards;
+}
+@keyframes wrong {
+  0%,22%,42%{background-color: rgb(72, 16, 112);}
+  20%,40%,60%{background-color: rgb(31, 1, 53);}
+  62%,100%{background-color: crimson;}
 }

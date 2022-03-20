@@ -2,8 +2,9 @@ import './App.css';
 // import Main from './ImageGallery/Main';
 import './index.css'
 import './App.css'
+import { Main } from './Quiz_app/Main';
 // import Main from './portfolio/Main';
-import Main from './playIt_tutorial/Main';
+// import Main from './playIt_tutorial/Main';
 // import Main from './calculator/Main';
 // import { TopNavbar } from './components/TopNavbar';
 // import {SideNavbar} from './components/SideNavbar'

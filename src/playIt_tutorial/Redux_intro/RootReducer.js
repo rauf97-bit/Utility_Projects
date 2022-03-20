@@ -42,6 +42,17 @@ export const initState = {
 
 const RootReducer = (state = initState, action) => {
   return state
+  // switch (action.type) {
+  //   case "DELETE_POST":
+  //     return{
+  //       ...state,
+         
+  //     }
+  //     break;
+  
+  //   default:console.log("Nothing")
+  //     break;
+  // }
 };
 
 export default RootReducer;
